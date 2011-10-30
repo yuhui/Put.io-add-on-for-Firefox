@@ -1,0 +1,19 @@
+.boldText {
+  font-weight: bold;
+}
+.htmlLink {
+	color: blue;
+	text-decoration: underline;
+}
+.vBigGap {
+  height: 15px;
+}
+.vSmallGap {
+  height: 10px;
+}
+#logoAndVersion {
+	padding-right: 20px;
+}
+#logo {
+	padding-bottom: 10px;
+}

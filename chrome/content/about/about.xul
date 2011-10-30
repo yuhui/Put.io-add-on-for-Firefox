@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://putio/skin/about.css" type="text/css"?>
+<!DOCTYPE dialog SYSTEM "chrome://putio/locale/about/about.dtd">
+<dialog xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        xmlns:html="http://www.w3.org/1999/xhtml"
+        id="putioAboutWindow"
+        title="&about.title;"
+        orient="vertical"
+        buttons="accept"
+        onload="sizeToContent()"
+>
+
+  <groupbox align="center" orient="horizontal">
+
+    <vbox id="logoAndVersion">
+      <hbox id="logo">
+        <image src="chrome://putio/skin/images/logo_blue_352x352.jpg" width="128" height="128"/>
+      </hbox>
+      <hbox class="boldText">
+        <spacer flex="1"/>     	
+        <text value="&about.version.text;"/>
+        <text value=" "/>
+        <text value="1.0"/>
+        <spacer flex="1"/>     	
+      </hbox>
+    </vbox>
+
+    <vbox>
+      <description class="boldText">
+        &about.description;
+      </description>
+      <spacer class="vBigGap"/>
+      <description>
+  		  <html:a href="https://github.com/yuhui/Put.io-add-on-for-Firefox" class="htmlLink" target="_blank">
+  		    &about.homepage;
+  		  </html:a>
+      </description>
+      <spacer class="vSmallGap"/>
+      <hbox>
+        <text value="&about.creator.text;" class="boldText"/>
+        <text value=": " class="boldText"/>
+        <text value="Yuhui BC"/>
+        <spacer flex="1"/>     	
+      </hbox>
+      <spacer class="vBigGap"/>
+      <description>
+        &about.disclaimer;
+      </description>
+      <description>
+  		  <html:a href="http://www.put.io" class="htmlLink" target="_blank">
+  		    &about.putio;
+  		  </html:a>
+      </description>
+    </vbox>
+
+  </groupbox>
+
+</dialog>

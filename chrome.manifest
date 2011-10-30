@@ -1,0 +1,11 @@
+content   putio     chrome/content/
+content   putio     chrome/content/                       contentaccessible=yes
+
+locale    putio     en-US           chrome/locale/en-US/
+
+skin      putio     classic/1.0     chrome/skin/
+
+## Firefox ##
+# browser.xul #
+overlay   chrome://browser/content/browser.xul      chrome://putio/content/browser/browser.xul
+style     chrome://browser/content/browser.xul      chrome://putio/skin/browser.css

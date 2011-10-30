@@ -1,0 +1,7 @@
+<!ENTITY about.title          "About Put.io for Firefox"                              >
+<!ENTITY about.version.text   "Version"                                               >
+<!ENTITY about.description    "Add download links to Put.io via the contextual menu." >
+<!ENTITY about.homepage       "Homepage"                                              >
+<!ENTITY about.creator.text   "Creator"                                               >
+<!ENTITY about.disclaimer     "This Firefox add-on is not developed nor supported by Put.io in any form whatsoever."  >
+<!ENTITY about.putio          "Put.io"                                                >

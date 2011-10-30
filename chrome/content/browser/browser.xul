@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://putio/skin/browser.css" type="text/css"?>
+<!DOCTYPE putio SYSTEM "chrome://putio/locale/browser/browser.dtd">
+
+<overlay id="putioOverlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+  <script type="application/x-javascript" src="chrome://putio/content/common.js"/>
+  <script type="application/x-javascript" src="chrome://putio/content/ui.js"/>
+  <script type="application/x-javascript" src="chrome://putio/content/browser/browser.js"/>
+  <script type="application/x-javascript" src="chrome://putio/content/preferences/preferences.js"/>
+
+  <stringbundleset id="stringbundleset">
+		<stringbundle id="putioStringBundle" src="chrome://putio/locale/browser/browser.properties"/>
+  </stringbundleset>
+
+	<menupopup id="contentAreaContextMenu">
+  	<menu id="putioContextMenu" label="&contextmenu.menu.label;" class="menu-iconic" insertafter="context-sep-selectall,context-savelink">
+  		<menupopup id="putioContextMenupopup">
+    		<menuitem id="putioContextMenupopupSaveLink" label="&contextmenu.menupopup.saveLink.label;"/>
+    		<menuseparator id="putioContextMenupopupSaveLinkSeparator"/>
+    		<menuitem id="putioContextMenupopupYourFiles" label="&contextmenu.menupopup.yourFiles.label;"/>
+    		<menuitem id="putioContextMenupopupActiveTransfers" label="&contextmenu.menupopup.activeTransfers.label;"/>
+    		<menuseparator/>
+    		<menuitem id="putioContextMenupopupAbout" label="&contextmenu.menupopup.about.label;"/>
+  		</menupopup>
+  	</menu>
+	</menupopup>
+
+  <!-- Tools menu option: Firefox -->
+	<menupopup id="menu_ToolsPopup">
+  	<menu id="putioToolsMenu" label="&tools.menu.label;" class="menu-iconic" insertafter="javascriptConsole,devToolsSeparator">
+  		<menupopup id="putioToolsMenupopup">
+  			<menuitem id="putioToolsMenupopupPreferences" label="&tools.menupopup.preferences.label;"/>
+    		<menuseparator/>
+    		<menuitem id="putioToolsMenupopupYourFiles" label="&tools.menupopup.yourFiles.label;"/>
+    		<menuitem id="putioToolsMenupopupActiveTransfers" label="&tools.menupopup.activeTransfers.label;"/>
+    		<menuseparator/>
+    		<menuitem id="putioToolsMenupopupAbout" label="&tools.menupopup.about.label;"/>
+  		</menupopup>
+  	</menu>
+	</menupopup>
+
+</overlay>

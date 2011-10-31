@@ -21,6 +21,7 @@
     		<menuitem id="putioContextMenupopupYourFiles" label="&contextmenu.menupopup.yourFiles.label;"/>
     		<menuitem id="putioContextMenupopupActiveTransfers" label="&contextmenu.menupopup.activeTransfers.label;"/>
     		<menuseparator/>
+    		<menuitem id="putioContextMenupopupHelp" label="&contextmenu.menupopup.help.label;"/>
     		<menuitem id="putioContextMenupopupAbout" label="&contextmenu.menupopup.about.label;"/>
   		</menupopup>
   	</menu>
@@ -35,6 +36,7 @@
     		<menuitem id="putioToolsMenupopupYourFiles" label="&tools.menupopup.yourFiles.label;"/>
     		<menuitem id="putioToolsMenupopupActiveTransfers" label="&tools.menupopup.activeTransfers.label;"/>
     		<menuseparator/>
+    		<menuitem id="putioToolsMenupopupHelp" label="&tools.menupopup.help.label;"/>
     		<menuitem id="putioToolsMenupopupAbout" label="&tools.menupopup.about.label;"/>
   		</menupopup>
   	</menu>

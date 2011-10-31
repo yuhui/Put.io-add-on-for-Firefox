@@ -161,6 +161,10 @@ PutIO.UI = {
 	  this._openAndReuseOneTab("https://put.io/your-files");
   },
 
+  openHelp : function() {
+	  this._openAndReuseOneTab("https://github.com/yuhui/Put.io-add-on-for-Firefox/wiki/Help");
+  },
+
   addNotification : function(notificationWindow, labelWithArgv, value, priority, buttons) {
     let that                    = this;
 

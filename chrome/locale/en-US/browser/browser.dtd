@@ -2,10 +2,12 @@
 <!ENTITY contextmenu.menupopup.saveLink.label         "Save Link..."      >
 <!ENTITY contextmenu.menupopup.yourFiles.label        "Your Files"        >
 <!ENTITY contextmenu.menupopup.activeTransfers.label  "Active Transfers"  >
+<!ENTITY contextmenu.menupopup.help.label             "Help"              >
 <!ENTITY contextmenu.menupopup.about.label            "About..."          >
 
 <!ENTITY tools.menu.label                       "Put.io"            >
 <!ENTITY tools.menupopup.preferences.label      "Preferences..."    >
 <!ENTITY tools.menupopup.yourFiles.label        "Your Files"        >
 <!ENTITY tools.menupopup.activeTransfers.label  "Active Transfers"  >
+<!ENTITY tools.menupopup.help.label             "Help"              >
 <!ENTITY tools.menupopup.about.label            "About..."          >

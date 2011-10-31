@@ -3,9 +3,9 @@
 <!ENTITY preferences.api_integration.label                        "API Integration"                                 >
 <!ENTITY preferences.api_integration.caption.api                  "API Key and Secret"                              >
 <!ENTITY preferences.api_integration.instruction.api              "Enter your Put.io API Key and Secret:"           >
-<!ENTITY preferences.api_integration.label.api_key                "API Key"                                         >
-<!ENTITY preferences.api_integration.label.api_secret             "API Secret"                                      >
+<!ENTITY preferences.api_integration.label.apiKey                 "API Key"                                         >
+<!ENTITY preferences.api_integration.label.apiSecret              "API Secret"                                      >
 <!ENTITY preferences.api_integration.description.api              "You can get your API Key and Secret from &quot;Settings&quot; in Put.io." >
-<!ENTITY preferences.api_integration.description.putio_settings   "Open your &quot;Settings&quot; page in Put.io."  >
-<!ENTITY preferences.api_integration.description.putio_no_account "Don't have a Put.io account?"                    >
-<!ENTITY preferences.api_integration.description.putio_register   "Sign up with Put.io."                            >
+<!ENTITY preferences.api_integration.description.putioSettings    "Open your &quot;Settings&quot; page in Put.io."  >
+<!ENTITY preferences.api_integration.description.putioNoAccount   "Don't have a Put.io account?"                    >
+<!ENTITY preferences.api_integration.description.putioRegister    "Sign up with Put.io."                            >

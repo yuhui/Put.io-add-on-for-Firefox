@@ -27,12 +27,12 @@
   			</columns>
   			<rows>
   				<row id="rowUsername" align="center">
-  					<label value="&preferences.api_integration.label.api_key;"/>
-  					<textbox id="putioAPIKey"    preference="prefPutioApiKey"/>
+  					<label value="&preferences.api_integration.label.apiKey;"/>
+  					<textbox id="putioApiKey"    preference="prefPutioApiKey"/>
   				</row>
   				<row id="rowSecret" align="center">
-  					<label value="&preferences.api_integration.label.api_secret;"/>
-  					<textbox id="putioAPISecret" preference="prefPutioApiSecret"/>
+  					<label value="&preferences.api_integration.label.apiSecret;"/>
+  					<textbox id="putioApiSecret" preference="prefPutioApiSecret"/>
   				</row>
   			</rows>
   		</grid>
@@ -42,14 +42,14 @@
   		</description>
   		<description>
   		  <html:a href="https://put.io/account/settings" class="htmlLink" target="_blank">
-  		    &preferences.api_integration.description.putio_settings;
+  		    &preferences.api_integration.description.putioSettings;
   		  </html:a>
   		</description>
   	</groupbox>
 		<description>
-		  &preferences.api_integration.description.putio_no_account;
+		  &preferences.api_integration.description.putioNoAccount;
 		  <html:a href="https://put.io/register" class="htmlLink" target="_blank">
-		    &preferences.api_integration.description.putio_register;
+		    &preferences.api_integration.description.putioRegister;
 		  </html:a>
 		</description>
 

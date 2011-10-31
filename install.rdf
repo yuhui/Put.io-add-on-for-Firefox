@@ -10,7 +10,8 @@
 
     <em:creator>Yuhui BC</em:creator>
     <em:developer>Yuhui BC</em:developer>
-    <em:homepageURL>https://github.com/yuhui/Put.io-add-on-for-Firefox</em:homepageURL>
+    <em:homepageURL>https://github.com/yuhui/Put.io-add-on-for-Firefox/wiki</em:homepageURL>
+    <em:iconURL>chrome://putio/skin/images/icon_32x32.jpg</em:iconURL>
 
     <em:optionsURL>chrome://putio/content/preferences/preferences.xul</em:optionsURL>
     <em:type>2</em:type>

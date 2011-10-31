@@ -52,6 +52,9 @@
   		    &about.putio;
   		  </html:a>
       </description>
+      <description>
+        &about.putioTrademark;
+      </description>
     </vbox>
 
   </groupbox>

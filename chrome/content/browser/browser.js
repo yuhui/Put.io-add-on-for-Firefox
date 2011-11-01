@@ -3,11 +3,6 @@ PutIO.BrowserOverlay = {
   init : function(aEvent) {
     PutIO.UI.init();
     PutIO.Preferences.init();
-    
-    // check for first run
-    if (!Application.prefs.getValue(firstRunDone)) {
-      Application.prefs.setValue(firstRunDone, true);
-    }
   },
 
   saveLink : function() {

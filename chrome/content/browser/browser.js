@@ -81,7 +81,7 @@ PutIO.BrowserOverlay = {
       request.open("GET", url, true);
       request.send(null);
     }
-    
+
   }
 
 };

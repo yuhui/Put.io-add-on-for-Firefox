@@ -112,6 +112,10 @@ PutIO.UI = {
 		document.getElementById("putioContextMenupopupActiveTransfers").addEventListener("command", function () {
 		  that.openActiveTransfers();
 		}, true);
+    // open Help webpage from the contextual menu item
+		document.getElementById("putioContextMenupopupHelp").addEventListener("command", function () {
+		  that.openHelp();
+		}, true);
     // open About dialog from the contextual menu item
 		document.getElementById("putioContextMenupopupAbout").addEventListener("command", function () {
 		  that.openAbout();
@@ -128,6 +132,10 @@ PutIO.UI = {
     // open "Active Transfers" web page from the Tools menu item
 		document.getElementById("putioToolsMenupopupActiveTransfers").addEventListener("command", function () {
 		  that.openActiveTransfers();
+		}, true);
+    // open Help webpage from the contextual menu item
+		document.getElementById("putioToolsMenupopupHelp").addEventListener("command", function () {
+		  that.openHelp();
 		}, true);
     // open About dialog from the Tools menu item
 		document.getElementById("putioToolsMenupopupAbout").addEventListener("command", function () {

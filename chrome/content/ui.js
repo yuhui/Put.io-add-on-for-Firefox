@@ -85,6 +85,20 @@ PutIO.UI = {
 	/* END Functions for windows and tabs */
 
   init : function() {
+
+    function findAnchorElement(startNode) {
+      var startNodeName = startNode.nodeName.toUpperCase();
+      var result = false;
+      if (startNodeName === "A") {
+        // found the A element!
+        result = true;
+      } else if (startNodeName !== "BODY") {
+        // traverse up to the parent, stopping only at BODY
+        result = findAnchorElement(startNode.parentNode);
+      }
+      return result;
+    }
+
     let that = this;
 
     this._instantApply = Application.prefs.get("browser.preferences.instantApply");
@@ -96,7 +110,7 @@ PutIO.UI = {
 		window.addEventListener("contextmenu", function (aEvent) {
 		  let menu          = document.getElementById("putioContextMenupopupSaveLink");
 		  let menuseparator = document.getElementById("putioContextMenupopupSaveLinkSeparator");
-		  if (aEvent.target.nodeName.toUpperCase() === "A") {
+		  if (findAnchorElement(aEvent.target)) {
 		    menu.hidden          = false;
 		    menuseparator.hidden = false;
 		  } else {

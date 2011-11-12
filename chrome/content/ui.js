@@ -84,20 +84,21 @@ PutIO.UI = {
   },
 	/* END Functions for windows and tabs */
 
-  init : function() {
-
-    function findAnchorElement(startNode) {
-      var startNodeName = startNode.nodeName.toUpperCase();
-      var result = false;
-      if (startNodeName === "A") {
-        // found the A element!
-        result = true;
-      } else if (startNodeName !== "BODY") {
-        // traverse up to the parent, stopping only at BODY
-        result = findAnchorElement(startNode.parentNode);
-      }
-      return result;
+	/* Functions for finding the node that the user has selected from the contextual menu */
+  _findAnchorElement: function (startNode) {
+    var startNodeName = startNode.nodeName.toUpperCase();
+    if (startNodeName === "A") {
+      // found the Anchor node!
+      return startNode;
+    } else if (startNodeName !== "BODY") {
+      // traverse up to the parent, stopping only at BODY
+      return this._findAnchorElement(startNode.parentNode);
     }
+    return null;
+  },
+	/* END Functions for finding the node that the user has selected from the contextual menu */
+
+  init : function() {
 
     let that = this;
 
@@ -108,9 +109,10 @@ PutIO.UI = {
 		  PutIO.BrowserOverlay.saveLink();
 		}, true);
 		window.addEventListener("contextmenu", function (aEvent) {
-		  let menu          = document.getElementById("putioContextMenupopupSaveLink");
-		  let menuseparator = document.getElementById("putioContextMenupopupSaveLinkSeparator");
-		  if (findAnchorElement(aEvent.target)) {
+		  let menu                              = document.getElementById("putioContextMenupopupSaveLink");
+		  let menuseparator                     = document.getElementById("putioContextMenupopupSaveLinkSeparator");
+		  PutIO.BrowserOverlay.selectedLinkNode = that._findAnchorElement(aEvent.target);
+		  if (PutIO.BrowserOverlay.selectedLinkNode !== null) {
 		    menu.hidden          = false;
 		    menuseparator.hidden = false;
 		  } else {

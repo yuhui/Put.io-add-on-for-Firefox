@@ -1,5 +1,7 @@
 PutIO.BrowserOverlay = {
 
+  selectedLinkNode: null,
+
   init : function(aEvent) {
     PutIO.UI.init();
     PutIO.Preferences.init();
@@ -35,7 +37,7 @@ PutIO.BrowserOverlay = {
         api_key    : PutIO.Preferences.apiKey,
         api_secret : PutIO.Preferences.apiSecret,
         params     : {
-          links : [document.popupNode.href]
+          links : [this.selectedLinkNode.href]
         }
       };
       let url = "http://api.put.io/v1/transfers?method=add&request=" + JSON.stringify(putioRequest);

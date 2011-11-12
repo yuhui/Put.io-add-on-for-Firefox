@@ -1,30 +1,21 @@
 <?xml version="1.0"?>
-<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:em="http://www.mozilla.org/2004/em-rdf#">
-
-  <Description about="urn:mozilla:install-manifest">
-
-    <em:id>putio@yuhui.bc</em:id>
-    <em:name>Put.io</em:name>
-    <em:description>Download links to Put.io via the contextual menu</em:description>
-    <em:version>1.0.1</em:version>
-
-    <em:creator>Yuhui BC</em:creator>
-    <em:developer>Yuhui BC</em:developer>
-    <em:homepageURL>https://github.com/yuhui/Put.io-add-on-for-Firefox/wiki</em:homepageURL>
-    <em:iconURL>chrome://putio/skin/images/icon_32x32.jpg</em:iconURL>
-
-    <em:optionsURL>chrome://putio/content/preferences/preferences.xul</em:optionsURL>
-    <em:type>2</em:type>
-
-		<!-- Firefox -->
-    <em:targetApplication>
-      <Description>
-        <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
-        <em:minVersion>4.0</em:minVersion>
-        <em:maxVersion>8.0</em:maxVersion>
-      </Description>
-    </em:targetApplication>
-
-  </Description>
-
-</RDF>
+<RDF:RDF xmlns:em="http://www.mozilla.org/2004/em-rdf#"
+         xmlns:NC="http://home.netscape.com/NC-rdf#"
+         xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <RDF:Description RDF:about="rdf:#$AdXBi"
+                   em:id="{ec8030f7-c20a-464f-9b0e-13a3a9e97384}"
+                   em:minVersion="4.0"
+                   em:maxVersion="8.0" />
+  <RDF:Description RDF:about="urn:mozilla:install-manifest"
+                   em:id="putio@yuhui.bc"
+                   em:name="Put.io"
+                   em:version="1.0.1 (20111112)"
+                   em:creator="Yuhui BC"
+                   em:description="Download links to Put.io via the contextual menu"
+                   em:homepageURL="https://github.com/yuhui/Put.io-add-on-for-Firefox/wiki"
+                   em:iconURL="chrome://putio/skin/images/icon_32x32.jpg"
+                   em:optionsURL="chrome://putio/content/preferences/preferences.xul"
+                   em:aboutURL="chrome://putio/content/about/about.xul">
+    <em:targetApplication RDF:resource="rdf:#$AdXBi"/>
+  </RDF:Description>
+</RDF:RDF>

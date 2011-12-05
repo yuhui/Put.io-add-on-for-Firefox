@@ -21,7 +21,7 @@
         <spacer flex="1"/>     	
         <text value="&about.version.text;"/>
         <text value=" "/>
-        <text value="1.0.1"/>
+        <text value="1.0.2 (20111205)"/>
         <spacer flex="1"/>     	
       </hbox>
     </vbox>

@@ -49,6 +49,7 @@ PutIO.UI = {
   _openAndReuseOneTab : function(url) {
     let wm                = Components.classes["@mozilla.org/appshell/window-mediator;1"].getService(Components.interfaces.nsIWindowMediator);
     let browserEnumerator = wm.getEnumerator("navigator:browser");
+    let encodedUrl        = encodeURI(url);
     let found, index, browserWin, tabbrowser, currentTab;
 
     for (found = false, index = 0, tabbrowser = browserEnumerator.getNext().gBrowser;
@@ -74,13 +75,13 @@ PutIO.UI = {
       tabbrowser = browserEnumerator.getNext().gBrowser;
 
       // Create and select tab
-      let newTab = tabbrowser.addTab(url);
+      let newTab = tabbrowser.addTab(encodedUrl);
       newTab.setAttribute("putioWindow", "putio");
       tabbrowser.selectedTab = newTab;
     }
 
     tabbrowser.ownerDocument.defaultView.focus();
-    tabbrowser.loadURI(url);
+    tabbrowser.loadURI(encodedUrl);
   },
 	/* END Functions for windows and tabs */
 

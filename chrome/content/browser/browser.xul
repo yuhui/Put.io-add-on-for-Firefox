@@ -29,7 +29,7 @@
 
   <!-- Tools menu option: Firefox -->
 	<menupopup id="menu_ToolsPopup">
-  	<menu id="putioToolsMenu" label="&tools.menu.label;" class="menu-iconic" insertafter="javascriptConsole,devToolsSeparator">
+  	<menu id="putioToolsMenu" label="&tools.menu.label;" class="menu-iconic" insertafter="devToolsSeparator">
   		<menupopup id="putioToolsMenupopup">
   			<menuitem id="putioToolsMenupopupPreferences" label="&tools.menupopup.preferences.label;"/>
     		<menuseparator/>

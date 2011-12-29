@@ -5,11 +5,11 @@
   <RDF:Description RDF:about="rdf:#$AdXBi"
                    em:id="{ec8030f7-c20a-464f-9b0e-13a3a9e97384}"
                    em:minVersion="4.0"
-                   em:maxVersion="10.*" />
+                   em:maxVersion="11.*" />
   <RDF:Description RDF:about="urn:mozilla:install-manifest"
                    em:id="putio@yuhui.bc"
                    em:name="Put.io"
-                   em:version="1.0.2-20111207"
+                   em:version="1.0.3-20111229"
                    em:creator="Yuhui BC"
                    em:type="2"
                    em:description="Download links to Put.io via the contextual menu"

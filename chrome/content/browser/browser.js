@@ -12,10 +12,10 @@ PutIO.BrowserOverlay = {
     let notificationWindow = gBrowser.contentWindow;
 
     // check that the API Key and Secret are not empty
-    if (PutIO.Preferences.apiKey    == null || PutIO.Preferences.apiKey    == "" ||
-        PutIO.Preferences.apiSecret == null || PutIO.Preferences.apiSecret == "") {
+    if (PutIO.Preferences.apiKey    === null || PutIO.Preferences.apiKey    === "" ||
+        PutIO.Preferences.apiSecret === null || PutIO.Preferences.apiSecret === "") {
 
-      PutIO.UI.addNotification(
+      PutIO.UI.replaceNotification(
         notificationWindow,
         ["putio.preferences.notification.label"],
         saveLinkNotificationValue,

@@ -15,7 +15,7 @@ PutIO.UI = {
 		}
 	},
 	_getFormattedString : function(key, argv) {
-	  if (argv == null || argv.length == 0) {
+	  if (typeof(argv) === "undefined" || argv === null || argv.length === 0) {
 	    return this._getString(key);
 	  } else {
   		let strbundle = this._getStringBundle();
@@ -33,7 +33,7 @@ PutIO.UI = {
     if (options.length > 0) {
       options += ",";
     }
-    if (null == this._dialog || this._dialog.closed) {
+    if (null === this._dialog || this._dialog.closed) {
   		this._dialog = window.openDialog(
   		  url,
   		  name,

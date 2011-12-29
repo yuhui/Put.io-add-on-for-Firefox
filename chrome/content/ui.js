@@ -85,19 +85,14 @@ PutIO.UI = {
   },
 	/* END Functions for windows and tabs */
 
-	/* Functions for finding the node that the user has selected from the contextual menu */
-  _findAnchorElement: function (startNode) {
-    var startNodeName = startNode.nodeName.toUpperCase();
-    if (startNodeName === "A") {
-      // found the Anchor node!
-      return startNode;
-    } else if (startNodeName !== "BODY") {
-      // traverse up to the parent, stopping only at BODY
-      return this._findAnchorElement(startNode.parentNode);
-    }
-    return null;
+	/* Functions for hiding the contextual menu items */
+  // https://developer.mozilla.org/en/XUL/PopupGuide/Extensions#Showing_and_hiding_context_menu_items
+  _putioContextMenupopupShowHidden: function(event) {
+    let foundAnchorElement = gContextMenu.onLink;
+    document.getElementById("putioContextMenupopupSaveLink").hidden          = !foundAnchorElement;
+    document.getElementById("putioContextMenupopupSaveLinkSeparator").hidden = !foundAnchorElement;
   },
-	/* END Functions for finding the node that the user has selected from the contextual menu */
+	/* END Functions for hiding the contextual menu items */
 
   init : function() {
 
@@ -109,18 +104,10 @@ PutIO.UI = {
 		document.getElementById("putioContextMenupopupSaveLink").addEventListener("command", function () {
 		  PutIO.BrowserOverlay.saveLink();
 		}, true);
-		window.addEventListener("contextmenu", function (aEvent) {
-		  let menu                              = document.getElementById("putioContextMenupopupSaveLink");
-		  let menuseparator                     = document.getElementById("putioContextMenupopupSaveLinkSeparator");
-		  PutIO.BrowserOverlay.selectedLinkNode = that._findAnchorElement(aEvent.target);
-		  if (PutIO.BrowserOverlay.selectedLinkNode !== null) {
-		    menu.hidden          = false;
-		    menuseparator.hidden = false;
-		  } else {
-		    menu.hidden          = true;
-		    menuseparator.hidden = true;
-		  }
-		}, false);
+
+		// Set show/hide setting for contextual menu item
+    document.getElementById("contentAreaContextMenu").addEventListener("popupshowing", this._putioContextMenupopupShowHidden, false);
+
     // open "Your Files" web page from the contextual menu item
 		document.getElementById("putioContextMenupopupYourFiles").addEventListener("command", function () {
 		  that.openYourFiles();

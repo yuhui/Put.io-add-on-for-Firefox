@@ -38,7 +38,7 @@ PutIO.BrowserOverlay = {
           links : [gContextMenu.linkURL]
         }
       };
-      let url = "http://api.put.io/v1/transfers?method=add&request=" + JSON.stringify(putioRequest);
+      let url = "http://api.put.io/v1/transfers?method=add&amp;request=" + encodeURIComponent(JSON.stringify(putioRequest));
       let request = Components.classes["@mozilla.org/xmlextras/xmlhttprequest;1"].createInstance(Components.interfaces.nsIXMLHttpRequest);
       request.onload = function(aEvent) {
         let putioResponse = JSON.parse(aEvent.target.responseText);
@@ -78,7 +78,7 @@ PutIO.BrowserOverlay = {
           []
         );
       };
-      request.open("GET", encodeURI(url), true);
+      request.open("GET", url, true);
       request.send(null);
     }
 

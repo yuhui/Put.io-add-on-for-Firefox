@@ -196,7 +196,7 @@ PutIO.UI = {
               popup     : null,
               callback  : function() {
                 that.openActiveTransfers();
-                notificationBox.removeNotification(notificationBox.getNotificationWithValue(notificationValue));
+                that.removeNotification(notificationWindow);
               }
             }
             break;
@@ -224,16 +224,15 @@ PutIO.UI = {
     );
   },
 
-  removeNotification : function(notificationWindow, value) {
-    let notificationBox  = getNotificationBox(notificationWindow);
-    let thisNotification = notificationBox.getNotificationWithValue(value);
-    if (thisNotification) {
-      thisNotification = notificationBox.removeNotification(thisNotification);
+  removeNotification : function(notificationWindow) {
+    let notificationBox = getNotificationBox(notificationWindow);
+    if (notificationBox.currentNotification !== null) {
+      thisNotification = notificationBox.removeCurrentNotification();
     }
   },
 
   replaceNotification : function(notificationWindow, labelWithArgv, value, priority, buttons) {
-    this.removeNotification(notificationWindow, value);
+    this.removeNotification(notificationWindow);
     this.addNotification(notificationWindow, labelWithArgv, value, priority, buttons);
   }
 

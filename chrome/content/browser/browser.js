@@ -23,7 +23,7 @@ PutIO.BrowserOverlay = {
 
     } else {
 
-      PutIO.UI.addNotification(
+      PutIO.UI.replaceNotification(
         notificationWindow,
         ["putio.saveLink.notification.label"],
         saveLinkNotificationValue,

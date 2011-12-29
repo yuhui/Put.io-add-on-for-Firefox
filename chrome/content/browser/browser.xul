@@ -16,7 +16,7 @@
 	<menupopup id="contentAreaContextMenu">
   	<menu id="putioContextMenu" label="&contextmenu.menu.label;" class="menu-iconic" insertafter="context-sep-selectall,context-savelink">
   		<menupopup id="putioContextMenupopup">
-    		<menuitem id="putioContextMenupopupSaveLink" label="&contextmenu.menupopup.saveLink.label;"/>
+    		<menuitem id="putioContextMenupopupSaveLink" label="&contextmenu.menupopup.saveLink.label;" default="true"/>
     		<menuseparator id="putioContextMenupopupSaveLinkSeparator"/>
     		<menuitem id="putioContextMenupopupYourFiles" label="&contextmenu.menupopup.yourFiles.label;"/>
     		<menuitem id="putioContextMenupopupActiveTransfers" label="&contextmenu.menupopup.activeTransfers.label;"/>

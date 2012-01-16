@@ -9,7 +9,7 @@
   <RDF:Description RDF:about="urn:mozilla:install-manifest"
                    em:id="putio@yuhui.bc"
                    em:name="Put.io"
-                   em:version="1.0.3-20111229"
+                   em:version="1.0.4-20120116"
                    em:creator="Yuhui BC"
                    em:type="2"
                    em:description="Download links to Put.io via the contextual menu"

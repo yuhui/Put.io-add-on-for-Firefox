@@ -33,7 +33,7 @@ PutIO.UI = {
     if (options.length > 0) {
       options += ",";
     }
-    if (null === this._dialog || this._dialog.closed) {
+    if (null === this._dialog || typeof(this._dialog) === "undefined" || this._dialog.closed) {
   		this._dialog = window.openDialog(
   		  url,
   		  name,
